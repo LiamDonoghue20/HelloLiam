@@ -11,7 +11,7 @@ public class Vehicle {
 
     //getters and setters of default vehicle values
     public Vehicle(String name, String vehicleType, double price, int releaseDate){
-
+        this.vehicleType = vehicleType;
         this.name = name;
         this.vehicleType = vehicleType;
         this.price = price;
@@ -31,6 +31,10 @@ public class Vehicle {
     }
     public int getReleaseDate(){
         return releaseDate;
+    }
+
+    public String toString() {
+        return "Type: "+this.vehicleType+"Name: " + this.name + " Price: " + this.price + " Release Date: " + this.releaseDate + " Does it Have a Propeller? : " + "\n";
     }
 
 
@@ -56,7 +60,7 @@ class Cars extends Vehicle {
         return fourWheelDrive;
     }
     public String toString() {
-        return "Cars's name: " + this.name + " Cars's Price: " + this.price + " Release Date: " + this.releaseDate + " is it convertable? : " + this.convertable + " is it a four wheel drive? " +this.fourWheelDrive + "\n";
+        return "Type: "+this.vehicleType+" Name: " + this.name + " Price: " + this.price + " Release Date: " + this.releaseDate + " is it convertable? : " + this.convertable + " is it a four wheel drive? " +this.fourWheelDrive + "\n";
     }
 
 }
@@ -84,7 +88,7 @@ class Bikes extends Vehicle {
     }
 
     public String toString() {
-        return "Bikes name: " + this.name + " Bike Price: " + this.price + " Release Date: " + this.releaseDate + "Bike Colour: " + this.colour + " Does it Have a Basket? " +this.hasBasket+ "\n";
+        return "Type: "+this.vehicleType+" Name: " + this.name + " Price: " + this.price + " Release Date: " + this.releaseDate + " Bike Colour: " + this.colour + " Does it Have a Basket? " +this.hasBasket+ "\n";
     }
 }
 class Planes extends Vehicle {
@@ -97,11 +101,12 @@ class Planes extends Vehicle {
         super(name, vehicleType, price, releaseDate);
         this.hasPropeller = hasPropeller;
     }
-    public boolean getHasPropeller(){
+
+    public boolean getHasPropeller() {
         return hasPropeller;
     }
 
     public String toString() {
-        return "Plane's name: " + this.name + " Plane's Price: " + this.price + " Release Date: " + this.releaseDate + " Does it Have a Propeller? : " + this.hasPropeller+ "\n";
+        return "Type: "+this.vehicleType+" Name: " + this.name + " Plane's Price: " + this.price + " Release Date: " + this.releaseDate + " Does it Have a Propeller? : " + this.hasPropeller + "\n";
     }
-}
+            }
